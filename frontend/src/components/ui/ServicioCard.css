@@ -1,0 +1,42 @@
+/* archivo: frontend/src/components/ui/ServicioCard.css */
+.servicio-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  box-shadow: var(--shadow-card);
+}
+
+.servicio-card h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-navy-800);
+  margin-block: var(--space-1);
+}
+
+.servicio-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.servicio-card li {
+  color: var(--color-slate);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+/* Bullet propio en vez del disco por defecto, para mantener control de color */
+.servicio-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-signal);
+}

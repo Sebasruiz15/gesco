@@ -1,0 +1,50 @@
+/*
+  Sistema de diseño GESCO
+  ------------------------
+  Paleta derivada directamente del isotipo: azul navy corporativo +
+  amarillo "señal" (las ondas del logo). Fondo frío casi blanco para que
+  el navy y el amarillo tengan aire para respirar — nada de crema/terracota
+  genérico, esto se ancla en la marca real del cliente.
+*/
+:root {
+  /* Color */
+  --color-navy-950: #0b1830;
+  --color-navy-800: #14294f;
+  --color-navy-600: #1f4e85;
+  --color-navy-500: #2c62a3;
+  --color-signal: #f4e409;
+  --color-signal-ink: #6b6300; /* amarillo oscurecido, para texto/contraste AA sobre blanco */
+  --color-bg: #f6f7fb;
+  --color-surface: #ffffff;
+  --color-ink: #10192e;
+  --color-slate: #5b6478;
+  --color-line: #e1e4ec;
+
+  /* Tipografía */
+  --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+
+  /* Escala tipográfica */
+  --text-xs: 0.8rem;
+  --text-sm: 0.95rem;
+  --text-base: 1.05rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.75rem;
+  --text-2xl: 2.5rem;
+  --text-3xl: clamp(2.5rem, 5vw, 4.25rem);
+
+  /* Espaciado */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6.5rem;
+
+  /* Layout */
+  --container-max: 1180px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --shadow-card: 0 10px 30px -14px rgba(11, 24, 48, 0.18);
+}

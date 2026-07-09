@@ -1,0 +1,95 @@
+/* archivo: frontend/src/components/sections/Contacto.css */
+.contacto {
+  background: var(--color-navy-950);
+  color: #fff;
+}
+
+.contacto__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.contacto h2 {
+  color: #fff;
+  margin-bottom: var(--space-2);
+}
+
+.contacto__lead {
+  color: #b8c2d9;
+  line-height: 1.6;
+  max-width: 42ch;
+  margin-bottom: var(--space-3);
+}
+
+.contacto__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: var(--text-sm);
+}
+
+.contacto__info a {
+  color: var(--color-signal);
+  text-decoration: none;
+}
+
+.contacto__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  background: var(--color-navy-800);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.contacto__form label {
+  font-size: var(--text-sm);
+  color: #b8c2d9;
+  margin-top: var(--space-1);
+}
+
+.contacto__form input,
+.contacto__form textarea {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  background: #fff;
+  color: var(--color-ink);
+}
+
+.contacto__form input[aria-invalid='true'],
+.contacto__form textarea[aria-invalid='true'] {
+  border-color: #e0554f;
+}
+
+.contacto__error {
+  color: #ff9d97;
+  font-size: var(--text-xs);
+}
+
+.contacto__form button {
+  margin-top: var(--space-2);
+}
+
+.contacto__feedback {
+  font-size: var(--text-sm);
+  margin-top: var(--space-1);
+}
+
+.contacto__feedback--exito {
+  color: #7be0a8;
+}
+
+.contacto__feedback--error {
+  color: #ff9d97;
+}
+
+@media (max-width: 720px) {
+  .contacto__grid {
+    grid-template-columns: 1fr;
+  }
+}

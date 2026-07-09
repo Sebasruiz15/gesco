@@ -1,0 +1,24 @@
+/* archivo: frontend/src/components/sections/PerfilEmpresa.css */
+.perfil {
+  padding-block: var(--space-6);
+}
+
+.perfil__inner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.perfil__texto {
+  color: var(--color-slate);
+  font-size: var(--text-base);
+  line-height: 1.7;
+  max-width: 62ch;
+}
+
+@media (max-width: 640px) {
+  .perfil__inner {
+    grid-template-columns: 1fr;
+  }
+}

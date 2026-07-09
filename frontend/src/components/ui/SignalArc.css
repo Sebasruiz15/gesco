@@ -1,0 +1,30 @@
+/* archivo: frontend/src/components/ui/SignalArc.css */
+.signal-arc {
+  display: inline-block;
+}
+
+.signal-arc path {
+  transform-origin: 24px 96px;
+}
+
+/* variant="pulse": animación continua tipo "transmitiendo" (usado en el Hero) */
+.signal-arc--pulse path {
+  animation: signal-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes signal-pulse {
+  0% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+
+/* variant="static": sin animación, solo se dibuja (tarjetas, eyebrows) */
+.signal-arc--static path {
+  animation: none;
+}

@@ -1,0 +1,14 @@
+/* archivo: frontend/src/components/sections/Servicios.css */
+.servicios {
+  padding-block: var(--space-6);
+}
+
+.servicios--alt {
+  background: var(--color-surface);
+}
+
+.servicios__grid {
+  margin-top: var(--space-3);
+  display: grid;
+  gap: var(--space-3);
+}
