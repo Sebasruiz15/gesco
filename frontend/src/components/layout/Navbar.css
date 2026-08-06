@@ -3,9 +3,9 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(246, 247, 251, 0.85);
+  background: linear-gradient(135deg, #fffdf0 0%, #fef8d9 100%);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--color-line);
+  border-bottom: 2px solid var(--color-signal);
 }
 
 .navbar__inner {
@@ -19,10 +19,6 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: var(--text-lg);
-  color: var(--color-navy-800);
   text-decoration: none;
 }
 
@@ -32,15 +28,16 @@
 }
 
 .navbar__links a {
-  font-size: var(--text-sm);
-  color: var(--color-slate);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-navy-800);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .navbar__links a:hover,
 .navbar__links a:focus-visible {
-  color: var(--color-navy-600);
+  color: var(--color-signal-ink);
 }
 
 .navbar__toggle {
@@ -51,10 +48,12 @@
   border: none;
   cursor: pointer;
 }
+
 .navbar__logo {
-  height: 8rem;
+  height: 8rem; /* bastante más grande, ya no compite con espacio libre del navbar */
   width: auto;
 }
+
 .navbar__toggle span {
   width: 22px;
   height: 2px;
@@ -69,7 +68,7 @@
     left: 0;
     right: 0;
     flex-direction: column;
-    background: var(--color-surface);
+    background: #fffdf0;
     padding: var(--space-2);
     gap: var(--space-2);
     border-bottom: 1px solid var(--color-line);
@@ -82,5 +81,9 @@
 
   .navbar__toggle {
     display: flex;
+  }
+
+  .navbar__logo {
+    height: 3.25rem;
   }
 }

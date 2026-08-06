@@ -1,7 +1,6 @@
 // archivo: frontend/src/components/layout/Navbar.jsx
 import { useState } from "react";
 import { motion } from "framer-motion";
-import SignalArc from "../ui/SignalArc.jsx";
 import "./Navbar.css";
 
 const LINKS = [
@@ -23,10 +22,12 @@ export default function Navbar() {
     >
       <div className="navbar__inner container">
         <a href="#top" className="navbar__brand">
-          <img
+          <motion.img
             src="/logo.png"
             alt="GESCO Consultorías"
             className="navbar__logo"
+            whileHover={{ scale: 1.06, rotate: -1 }}
+            transition={{ type: "spring", stiffness: 300, damping: 15 }}
           />
         </a>
 
@@ -38,7 +39,6 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Botón hamburguesa: solo visible en mobile (ver CSS) */}
         <button
           className="navbar__toggle"
           aria-label={open ? "Cerrar menú" : "Abrir menú"}
