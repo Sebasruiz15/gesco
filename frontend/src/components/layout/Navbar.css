@@ -1,18 +1,22 @@
 /* archivo: frontend/src/components/layout/Navbar.css */
+
 .navbar {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: linear-gradient(135deg, #fffdf0 0%, #fef8d9 100%);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, #afb1b4 0%, #e2e5ea 100%);
   border-bottom: 2px solid var(--color-signal);
+  overflow: hidden; 
 }
 
 .navbar__inner {
+  position: relative; /* para quedar por encima del canvas */
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-block: var(--space-1);
+  padding-inline: var(--space-3);
 }
 
 .navbar__brand {
@@ -20,11 +24,16 @@
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
+  flex-shrink: 0;
+ 
 }
 
 .navbar__links {
   display: flex;
-  gap: var(--space-3);
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: clamp(var(--space-2), 2vw, var(--space-3));
 }
 
 .navbar__links a {
@@ -32,6 +41,7 @@
   font-weight: 500;
   color: var(--color-navy-800);
   text-decoration: none;
+  white-space: nowrap;
   transition: color 0.2s ease;
 }
 
@@ -43,32 +53,39 @@
 .navbar__toggle {
   display: none;
   flex-direction: column;
-  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
   background: none;
   border: none;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .navbar__logo {
-  height: 8rem; /* bastante más grande, ya no compite con espacio libre del navbar */
+  height: clamp(3rem, 8vw, 8rem);
   width: auto;
 }
 
 .navbar__toggle span {
-  width: 22px;
+  width: 24px;
   height: 2px;
   background: var(--color-navy-800);
 }
 
-/* Mobile */
-@media (max-width: 720px) {
+/* Tablet y pantallas medianas: se activa el menú hamburguesa
+   antes de que los enlaces empiecen a romper línea */
+@media (max-width: 900px) {
   .navbar__links {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     flex-direction: column;
-    background: #fffdf0;
+    align-items: stretch;
+    background: #b4b3b3;
     padding: var(--space-2);
     gap: var(--space-2);
     border-bottom: 1px solid var(--color-line);
@@ -79,11 +96,34 @@
     display: flex;
   }
 
+  .navbar__links a {
+    padding-block: 0.4rem;
+  }
+
   .navbar__toggle {
     display: flex;
   }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .navbar__inner {
+    padding-inline: var(--space-2);
+  }
 
   .navbar__logo {
-    height: 3.25rem;
+    height: 3rem;
+  }
+}
+
+/* Pantallas grandes / TV: se limita el ancho útil y se agranda
+   ligeramente el texto para lectura a distancia */
+@media (min-width: 1600px) {
+  .navbar__inner {
+    max-width: 1600px;
+  }
+
+  .navbar__links a {
+    font-size: var(--text-lg);
   }
 }

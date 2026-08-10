@@ -1,0 +1,18 @@
+/* archivo: frontend/src/components/sections/Recursos.css */
+.recursos {
+  padding-block: var(--space-6);
+  background: var(--color-bg);
+}
+
+.recursos__lead {
+  color: var(--color-slate);
+  max-width: 60ch;
+  margin-top: var(--space-1);
+  margin-bottom: var(--space-3);
+}
+
+.recursos__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-3);
+}

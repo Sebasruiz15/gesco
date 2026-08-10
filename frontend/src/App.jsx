@@ -1,21 +1,25 @@
+// archivo: frontend/src/App.jsx
+import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/layout/Navbar.jsx'
 import Footer from './components/layout/Footer.jsx'
-import Hero from './components/sections/Hero.jsx'
-import PerfilEmpresa from './components/sections/PerfilEmpresa.jsx'
-import ServiciosISP from './components/sections/ServiciosISP.jsx'
-import ProcesosContables from './components/sections/ProcesosContables.jsx'
-import Contacto from './components/sections/Contacto.jsx'
+import Inicio from './pages/Inicio.jsx'
+import Nosotros from './pages/Nosotros.jsx'
+import ServiciosISPPage from './pages/ServiciosISPPage.jsx'
+import ProcesosContablesPage from './pages/ProcesosContablesPage.jsx'
+import ContactoPage from './pages/ContactoPage.jsx'
 
 export default function App() {
   return (
     <>
       <Navbar />
       <main>
-        <Hero />
-        <PerfilEmpresa />
-        <ServiciosISP />
-        <ProcesosContables />
-        <Contacto />
+        <Routes>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="/servicios-isp" element={<ServiciosISPPage />} />
+          <Route path="/procesos-contables" element={<ProcesosContablesPage />} />
+          <Route path="/contacto" element={<ContactoPage />} />
+        </Routes>
       </main>
       <Footer />
     </>

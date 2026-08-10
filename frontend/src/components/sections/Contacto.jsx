@@ -1,5 +1,7 @@
+// archivo: frontend/src/components/sections/Contacto.jsx
 import { motion } from 'framer-motion'
 import { useContactForm } from '../../hooks/useContactForm.js'
+import { IconUser, IconMail, IconTag, IconMessage } from '../ui/FormIcons.jsx'
 import './Contacto.css'
 
 export default function Contacto() {
@@ -28,63 +30,85 @@ export default function Contacto() {
           </div>
         </motion.div>
 
-        <motion.form
-          className="contacto__form"
-          onSubmit={handleSubmit}
-          noValidate
+        <motion.div
+          className="contacto__form-wrapper"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <label htmlFor="nombre">Nombre</label>
-          <input
-            id="nombre"
-            name="nombre"
-            type="text"
-            value={valores.nombre}
-            onChange={handleChange}
-            aria-invalid={Boolean(errores.nombre)}
-          />
-          {errores.nombre && <span className="contacto__error">{errores.nombre}</span>}
+          <div className="contacto__form-glow" aria-hidden="true" />
 
-          <label htmlFor="correo">Correo</label>
-          <input
-            id="correo"
-            name="correo"
-            type="email"
-            value={valores.correo}
-            onChange={handleChange}
-            aria-invalid={Boolean(errores.correo)}
-          />
-          {errores.correo && <span className="contacto__error">{errores.correo}</span>}
+          <form className="contacto__form" onSubmit={handleSubmit} noValidate>
+            <label htmlFor="nombre" className="contacto__label">
+              <IconUser /> Nombre
+            </label>
+            <input
+              id="nombre"
+              name="nombre"
+              type="text"
+              value={valores.nombre}
+              onChange={handleChange}
+              aria-invalid={Boolean(errores.nombre)}
+            />
+            {errores.nombre && <span className="contacto__error">{errores.nombre}</span>}
 
-          <label htmlFor="mensaje">Mensaje</label>
-          <textarea
-            id="mensaje"
-            name="mensaje"
-            rows={4}
-            value={valores.mensaje}
-            onChange={handleChange}
-            aria-invalid={Boolean(errores.mensaje)}
-          />
-          {errores.mensaje && <span className="contacto__error">{errores.mensaje}</span>}
+            <label htmlFor="correo" className="contacto__label">
+              <IconMail /> Correo
+            </label>
+            <input
+              id="correo"
+              name="correo"
+              type="email"
+              value={valores.correo}
+              onChange={handleChange}
+              aria-invalid={Boolean(errores.correo)}
+            />
+            {errores.correo && <span className="contacto__error">{errores.correo}</span>}
 
-          <button type="submit" className="btn btn-primary" disabled={estado === 'enviando'}>
-            {estado === 'enviando' ? 'Enviando…' : 'Enviar mensaje'}
-          </button>
+            <label htmlFor="tipoConsulta" className="contacto__label">
+              <IconTag /> Tipo de consulta
+            </label>
+            <select
+              id="tipoConsulta"
+              name="tipoConsulta"
+              value={valores.tipoConsulta}
+              onChange={handleChange}
+            >
+              <option value="operacion-isp">Operación de ISP</option>
+              <option value="procesos-contables">Procesos Contables</option>
+              <option value="otro">Otro</option>
+            </select>
 
-          {estado === 'exito' && (
-            <p className="contacto__feedback contacto__feedback--exito" role="status">
-              Mensaje enviado. Le responderemos muy pronto.
-            </p>
-          )}
-          {estado === 'error' && (
-            <p className="contacto__feedback contacto__feedback--error" role="alert">
-              {mensajeServidor}
-            </p>
-          )}
-        </motion.form>
+            <label htmlFor="mensaje" className="contacto__label">
+              <IconMessage /> Mensaje
+            </label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows={4}
+              value={valores.mensaje}
+              onChange={handleChange}
+              aria-invalid={Boolean(errores.mensaje)}
+            />
+            {errores.mensaje && <span className="contacto__error">{errores.mensaje}</span>}
+
+            <button type="submit" className="btn btn-primary" disabled={estado === 'enviando'}>
+              {estado === 'enviando' ? 'Enviando…' : 'Enviar mensaje'}
+            </button>
+
+            {estado === 'exito' && (
+              <p className="contacto__feedback contacto__feedback--exito" role="status">
+                Mensaje enviado. Le responderemos muy pronto.
+              </p>
+            )}
+            {estado === 'error' && (
+              <p className="contacto__feedback contacto__feedback--error" role="alert">
+                {mensajeServidor}
+              </p>
+            )}
+          </form>
+        </motion.div>
       </div>
     </section>
   )

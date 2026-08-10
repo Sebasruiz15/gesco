@@ -1,9 +1,10 @@
+// archivo: frontend/src/hooks/useContactForm.js
 import { useState } from 'react'
 import { enviarContacto } from '../services/api.js'
 
-const ESTADO_INICIAL = { nombre: '', correo: '', mensaje: '' }
-
+const ESTADO_INICIAL = { nombre: '', correo: '', tipoConsulta: 'operacion-isp', mensaje: '' }
 // 'idle' | 'enviando' | 'exito' | 'error'
+
 export function useContactForm() {
   const [valores, setValores] = useState(ESTADO_INICIAL)
   const [errores, setErrores] = useState({})
@@ -27,10 +28,8 @@ export function useContactForm() {
   const handleSubmit = async (event) => {
     event.preventDefault()
     if (!validar()) return
-
     setEstado('enviando')
     setMensajeServidor('')
-
     try {
       await enviarContacto(valores)
       setEstado('exito')
