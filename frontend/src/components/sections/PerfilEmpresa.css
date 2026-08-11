@@ -3,22 +3,49 @@
   padding-block: var(--space-6);
 }
 
-.perfil__inner {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: var(--space-4);
-  align-items: start;
-}
-
 .perfil__texto {
   color: var(--color-slate);
   font-size: var(--text-base);
   line-height: 1.7;
-  max-width: 62ch;
+  max-width: 68ch;
+  margin-top: var(--space-1);
 }
 
-@media (max-width: 640px) {
-  .perfil__inner {
+.perfil__cifras {
+  margin-top: var(--space-5);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+}
+
+.cifra-card {
+  border-left: 3px solid var(--color-signal);
+  padding-left: var(--space-2);
+}
+
+.cifra-card__valor {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-navy-800);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.cifra-card__etiqueta {
+  font-size: var(--text-sm);
+  color: var(--color-slate);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .perfil__cifras {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .perfil__cifras {
     grid-template-columns: 1fr;
   }
 }

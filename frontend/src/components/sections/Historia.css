@@ -1,0 +1,110 @@
+/* archivo: frontend/src/components/sections/Historia.css */
+.historia {
+  position: relative;
+  padding-block: var(--space-6);
+  background: var(--color-navy-950);
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Textura de puntos, igual a la de Contacto — la extraemos como
+   patrón visual repetido de la marca en fondos oscuros. */
+.historia__bg {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(244, 228, 9, 0.1) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.historia__content {
+  position: relative;
+  z-index: 1;
+}
+
+.historia h2 {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  max-width: 42ch;
+}
+
+.historia__timeline {
+  margin-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.historia__hito {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: var(--space-3);
+}
+
+.historia__marcador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.historia__punto {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-signal);
+  flex-shrink: 0;
+}
+
+.historia__linea {
+  width: 2px;
+  flex-grow: 1;
+  background: rgba(244, 228, 9, 0.25);
+  margin-top: 4px;
+}
+
+.historia__contenido {
+  padding-bottom: var(--space-4);
+}
+
+.historia__etapa {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-signal);
+}
+
+.historia__contenido h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: #fff;
+  margin-block: var(--space-1);
+}
+
+.historia__contenido p {
+  font-size: var(--text-sm);
+  color: #b8c2d9;
+  line-height: 1.7;
+  max-width: 60ch;
+}
+
+.historia__cita {
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.historia__cita p {
+  font-size: var(--text-lg);
+  font-style: italic;
+  color: #fff;
+  max-width: 60ch;
+  line-height: 1.6;
+}
+
+.historia__cita footer {
+  margin-top: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--color-signal);
+}

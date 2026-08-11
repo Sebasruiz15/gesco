@@ -1,38 +1,51 @@
 // archivo: frontend/src/components/sections/PerfilEmpresa.jsx
 import { motion } from 'framer-motion'
-import SignalArc from '../ui/SignalArc.jsx'
+import CountUp from '../ui/CountUp.jsx'
 import './PerfilEmpresa.css'
+
+const CIFRAS = [
+  { valor: 10, sufijo: '+', etiqueta: 'Años de trayectoria' },
+  { texto: 'Decenas', etiqueta: 'De operadores de internet y TV confían en GESCO' },
+  { valor: 4, etiqueta: 'Entes regulatorios dominados: MinTIC · CRC · ANE · SIC' },
+  { valor: 100, sufijo: '%', etiqueta: 'Información verificada en fuente oficial' },
+]
 
 export default function PerfilEmpresa() {
   return (
     <section className="perfil" id="perfil">
-      <div className="perfil__inner container">
+      <div className="container">
         <motion.div
-          className="perfil__signal"
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.6 }}
-        >
-          <SignalArc size={90} variant="pulse" />
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          transition={{ duration: 0.5 }}
         >
           <p className="eyebrow">Quiénes somos</p>
-          <h2>Una firma que transmite confianza, no solo consultoría.</h2>
+          <h2>Una firma con trayectoria comprobada en el sector TIC</h2>
           <p className="perfil__texto">
-            Somos una firma especializada y comprometida con nuestros clientes; brindamos un
-            portafolio integral con productos y servicios honestos y confiables. Nuestro equipo
-            tiene amplia experiencia desarrollando estrategias para los niveles de gestión
-            comercial, técnica y financiera, con un enfoque de mejoramiento continuo y auditorías
-            internas que optimizan procesos, recursos y calidad del servicio.
+            GESCO nació como firma contable y administrativa, y hoy es una consultoría
+            especializada en telecomunicaciones con trayectoria comprobada: decenas de operadores
+            confían en nosotros sus obligaciones regulatorias, contables y financieras.
           </p>
         </motion.div>
+
+        <div className="perfil__cifras">
+          {CIFRAS.map((cifra, i) => (
+            <motion.div
+              key={cifra.etiqueta}
+              className="cifra-card"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+            >
+              <p className="cifra-card__valor">
+                {cifra.texto ?? <CountUp hasta={cifra.valor} sufijo={cifra.sufijo ?? ''} />}
+              </p>
+              <p className="cifra-card__etiqueta">{cifra.etiqueta}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   )
