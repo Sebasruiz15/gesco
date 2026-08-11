@@ -18,7 +18,7 @@ export default function VisionMision() {
           <p>
             Ser una firma de referencia en consultoría para el sector de las telecomunicaciones en
             Colombia, reconocida por convertir el cumplimiento regulatorio y la operación
-            empresarial en procesos simples, automatizados y rentables — para toda empresa que
+            empresarial en procesos simples, automatizados y rentables  para toda empresa que
             conecta al país, sin importar su tamaño.
           </p>
         </motion.article>
@@ -35,7 +35,7 @@ export default function VisionMision() {
           <p>
             Acompañar a los prestadores de servicios de telecomunicaciones a operar con
             tranquilidad, combinando consultoría especializada, inteligencia artificial y criterio
-            experto — para que cada operador se dedique a lo que sabe hacer: conectar a su
+            experto  para que cada operador se dedique a lo que sabe hacer: conectar a su
             comunidad.
           </p>
         </motion.article>
