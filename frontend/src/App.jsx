@@ -7,6 +7,7 @@ import Nosotros from './pages/Nosotros.jsx'
 import ServiciosISPPage from './pages/ServiciosISPPage.jsx'
 import ProcesosContablesPage from './pages/ProcesosContablesPage.jsx'
 import ContactoPage from './pages/ContactoPage.jsx'
+import TipsRegulatorios from './pages/TipsRegulatorios.jsx'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/servicios-isp" element={<ServiciosISPPage />} />
           <Route path="/procesos-contables" element={<ProcesosContablesPage />} />
           <Route path="/contacto" element={<ContactoPage />} />
+          <Route path="/tips-regulatorios" element={<TipsRegulatorios />} />
         </Routes>
       </main>
       <Footer />

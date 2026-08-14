@@ -1,9 +1,22 @@
+/* archivo: frontend/src/components/sections/Hero.css */
 .hero {
   position: relative;
   background: radial-gradient(120% 120% at 80% 0%, var(--color-navy-600) 0%, var(--color-navy-950) 55%);
   color: var(--color-surface);
   padding: calc(var(--space-6) + 4rem) 0 var(--space-6);
   overflow: hidden;
+}
+
+/* Textura de puntos superpuesta al gradiente, igual patrón que
+   usamos en Contacto e Historia — como pseudo-elemento para no
+   competir con el fondo real de .hero. */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(244, 228, 9, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
 }
 
 .hero__field {
@@ -20,6 +33,7 @@
 
 .hero__content {
   position: relative;
+  z-index: 1; /* por encima del ::before de puntos */
   max-width: 700px;
 }
 

@@ -14,7 +14,7 @@ const HITOS = [
     etapa: 'El punto de inflexión',
     titulo: 'Donde otros vieron un trámite, nosotros vimos una especialidad',
     texto:
-      'Al atender la contabilidad de un proveedor de internet, identificamos una necesidad estructural del sector: los operadores enfrentaban un marco regulatorio exigente — MinTIC, CRC, ANE, SIC — sin acompañamiento especializado a su medida. Invertimos años en dominar ese marco norma por norma.',
+      'Al atender la contabilidad de un proveedor de internet, identificamos una necesidad estructural del sector: los operadores enfrentaban un marco regulatorio exigente  MinTIC, CRC, ANE, SIC, RUTIC  sin acompañamiento especializado a su medida. Invertimos años en dominar ese marco norma por norma.',
   },
   {
     etapa: 'Hoy',

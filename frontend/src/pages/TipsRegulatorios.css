@@ -1,0 +1,89 @@
+/* archivo: frontend/src/pages/TipsRegulatorios.css */
+.tips-regulatorios {
+  padding-block: var(--space-6);
+  background: var(--color-bg);
+  min-height: 60vh;
+}
+
+.tips-regulatorios__lead {
+  color: var(--color-slate);
+  max-width: 65ch;
+  margin-top: var(--space-1);
+  margin-bottom: var(--space-4);
+}
+
+.tips-regulatorios__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: var(--space-3);
+}
+
+.ente-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  box-shadow: var(--shadow-card);
+}
+
+.ente-card__header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.ente-card__header h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--color-navy-800);
+}
+
+.ente-card__resumen {
+  font-size: var(--text-sm);
+  color: var(--color-slate);
+  margin-top: 0.2rem;
+}
+
+.ente-card__tips {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-2);
+}
+
+.ente-card__tips li {
+  font-size: var(--text-sm);
+  color: var(--color-ink);
+  line-height: 1.6;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.ente-card__tips li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-signal);
+}
+
+.ente-card__link {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-navy-600);
+  text-decoration: none;
+}
+
+.ente-card__link:hover {
+  color: var(--color-signal-ink);
+}
+
+@media (max-width: 800px) {
+  .tips-regulatorios__grid {
+    grid-template-columns: 1fr;
+  }
+}

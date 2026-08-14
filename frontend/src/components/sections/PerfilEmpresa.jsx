@@ -6,7 +6,7 @@ import './PerfilEmpresa.css'
 const CIFRAS = [
   { valor: 10, sufijo: '+', etiqueta: 'Años de trayectoria' },
   { texto: 'Decenas', etiqueta: 'De operadores de internet y TV confían en GESCO' },
-  { valor: 4, etiqueta: 'Entes regulatorios dominados: MinTIC · CRC · ANE · SIC' },
+  { valor: 5, etiqueta: 'Entes regulatorios dominados: MinTIC · CRC · ANE · SIC · RUTIC' },
   { valor: 100, sufijo: '%', etiqueta: 'Información verificada en fuente oficial' },
 ]
 

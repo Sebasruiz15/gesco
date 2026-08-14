@@ -1,4 +1,4 @@
-// archivo: frontend/src/components/sections/Contacto.jsx
+// archivo: frontend/src/components/sections/Contacto.jsx (solo cambia el bloque del spotlight)
 import { motion } from 'framer-motion'
 import { useContactForm } from '../../hooks/useContactForm.js'
 import { IconUser, IconMail, IconTag, IconMessage } from '../ui/FormIcons.jsx'
@@ -37,7 +37,14 @@ export default function Contacto() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <div className="contacto__form-glow" aria-hidden="true" />
+          {/* Punto de origen ("0") con ondas expandiéndose, centrado
+              detrás de la tarjeta del formulario */}
+          <div className="contacto__ping" aria-hidden="true">
+            <span className="contacto__ping-ring" />
+            <span className="contacto__ping-ring" />
+            <span className="contacto__ping-ring" />
+            <span className="contacto__ping-dot" />
+          </div>
 
           <form className="contacto__form" onSubmit={handleSubmit} noValidate>
             <label htmlFor="nombre" className="contacto__label">
@@ -76,7 +83,6 @@ export default function Contacto() {
               onChange={handleChange}
             >
               <option value="operacion-isp">Operación de ISP</option>
-              <option value="procesos-contables">Procesos Contables</option>
               <option value="otro">Otro</option>
             </select>
 

@@ -6,8 +6,8 @@ export default function Hero() {
   return (
     <section id="inicio" className="hero">
       <div className="hero__field" aria-hidden="true">
-        
-      <SignalArc size={520} variant="pulse" className="hero__arc" strokeWidth={2.5} dotRadius={2.5} />
+
+        <SignalArc size={520} variant="pulse" className="hero__arc" strokeWidth={2.5} dotRadius={2.5} />
       </div>
 
       <div className="container hero__content">
@@ -37,7 +37,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           Acompañamos a Proveedores de Servicios de Telecomunicaciones en su
-          cumplimiento ante el MinTIC y la CRC, la estandarización de
+          cumplimiento ante el MinTIC, la CRC y la SIC, la estandarización de
           procesos operativos y la ejecución contable bajo NIIF — con
           consultoría honesta y cercana.
         </motion.p>

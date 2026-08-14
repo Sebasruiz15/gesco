@@ -8,6 +8,7 @@ const ITEMS = [
   'Estandarización de procesos operativos para la prestación de servicios de telecomunicaciones',
   'Desarrollo de Manuales Técnicos, de Funciones, de Higiene y Seguridad Industrial, entre otros',
   'Reporte de obligaciones ante otras entidades de inspección, vigilancia y control',
+  'Gestión y respuesta de PQR conforme al Régimen de Protección al Usuario vigilado por la SIC',
 ]
 
 export default function ServiciosISP() {
