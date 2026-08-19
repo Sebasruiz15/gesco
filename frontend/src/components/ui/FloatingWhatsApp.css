@@ -1,0 +1,59 @@
+/* archivo: frontend/src/components/ui/FloatingWhatsApp.css */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100; /* por encima del navbar (z-index: 50) y de todo el contenido */
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  text-decoration: none;
+}
+
+.floating-whatsapp svg {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Anillo pulsante detrás del botón, para llamar la atención sin ser
+   invasivo — mismo principio que el punto del badge en Recursos. */
+.floating-whatsapp__pulse {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #25d366;
+  animation: pulso-whatsapp 2.2s ease-out infinite;
+}
+
+@keyframes pulso-whatsapp {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-whatsapp {
+    bottom: 16px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .floating-whatsapp svg {
+    width: 26px;
+    height: 26px;
+  }
+}

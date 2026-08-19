@@ -1,0 +1,51 @@
+/* archivo: frontend/src/components/sections/CatalogoServicios.css */
+.catalogo {
+  padding-block: var(--space-6);
+  background: var(--color-bg);
+}
+
+.catalogo--niveles {
+  background: var(--color-navy-950);
+}
+
+.catalogo h2 {
+  max-width: 50ch;
+}
+
+.catalogo__lead {
+  color: var(--color-slate);
+  max-width: 62ch;
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.catalogo__lead--light {
+  color: #b8c2d9;
+}
+
+.catalogo__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-3);
+}
+
+.catalogo__niveles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+@media (max-width: 900px) {
+  .catalogo__niveles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.catalogo--niveles {
+  position: relative;
+  overflow: hidden;
+}
+
+.catalogo__niveles-content {
+  position: relative;
+  z-index: 1;
+}

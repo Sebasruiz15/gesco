@@ -1,0 +1,82 @@
+/* archivo: frontend/src/components/ui/ServicioProyectoCard.css */
+.servicio-proyecto {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.servicio-proyecto:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-signal);
+}
+
+.servicio-proyecto__etapa {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-signal-ink);
+}
+
+.servicio-proyecto__header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  margin-block: var(--space-1);
+}
+
+.servicio-proyecto__header h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-navy-800);
+}
+
+.servicio-proyecto__gancho {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-signal-ink);
+  margin-top: 0.2rem;
+}
+
+.servicio-proyecto__resumen {
+  font-size: var(--text-sm);
+  color: var(--color-slate);
+  line-height: 1.65;
+}
+
+.servicio-proyecto__bullets {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: var(--space-1) 0 var(--space-2);
+}
+
+.servicio-proyecto__bullets li {
+  font-size: var(--text-xs);
+  color: var(--color-ink);
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.servicio-proyecto__bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-signal);
+}
+
+.servicio-proyecto .whatsapp-btn {
+  align-self: flex-start;
+  margin-top: auto;
+}

@@ -2,6 +2,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/layout/Navbar.jsx'
 import Footer from './components/layout/Footer.jsx'
+import FloatingWhatsApp from './components/ui/FloatingWhatsApp.jsx'
 import Inicio from './pages/Inicio.jsx'
 import Nosotros from './pages/Nosotros.jsx'
 import ServiciosISPPage from './pages/ServiciosISPPage.jsx'
@@ -24,6 +25,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </>
   )
 }

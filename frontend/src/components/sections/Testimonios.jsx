@@ -31,7 +31,7 @@ export default function Testimonios() {
     <section className="testimonios">
       <div className="container">
         <p className="eyebrow">Lo que dicen nuestros clientes</p>
-        <h2>ISP's que ya operan en la frecuencia correcta</h2>
+        <h2>PRST que ya operan en la frecuencia correcta</h2>
 
         <div className="testimonios__grid">
           {TESTIMONIOS.map((testimonio, i) => (

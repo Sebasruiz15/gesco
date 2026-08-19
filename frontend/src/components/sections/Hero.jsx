@@ -12,13 +12,13 @@ export default function Hero() {
 
       <div className="container hero__content">
         <motion.span
-          className="eyebrow eyebrow--light"
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Consultoría especializada en ISP&apos;s
-        </motion.span>
+            className="eyebrow eyebrow--light"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Consultoría integral para PRST en Colombia
+         </motion.span>
 
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
@@ -36,10 +36,10 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Acompañamos a Proveedores de Servicios de Telecomunicaciones en su
-          cumplimiento ante el MinTIC, la CRC y la SIC, la estandarización de
-          procesos operativos y la ejecución contable bajo NIIF — con
-          consultoría honesta y cercana.
+          Acompañamos a los Proveedores de Redes y Servicios de Telecomunicaciones (PRST) en todo lo que
+          su operación diaria exige: cumplimiento ante MinTIC, CRC, ANE y SIC, gestión administrativa y
+          contable, y procesos que funcionan sin sobresaltos. Usted conecta a su comunidad; del resto nos
+          encargamos nosotros.
         </motion.p>
 
         <motion.div

@@ -4,9 +4,11 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: linear-gradient(135deg, #afb1b4 0%, #e2e5ea 100%);
+  background:
+    radial-gradient(140% 180% at 90% 0%, rgba(244, 228, 9, 0.22) 0%, transparent 55%),
+    linear-gradient(135deg, #afb1b4 0%, #e2e5ea 100%);
   border-bottom: 2px solid var(--color-signal);
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .navbar__inner {
@@ -16,7 +18,7 @@
   align-items: center;
   justify-content: space-between;
   padding-block: var(--space-2);
-  padding-inline: var(--space-3);
+  padding-inline: var(--space-5);
 }
 
 .navbar__brand {

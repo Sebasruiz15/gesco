@@ -4,7 +4,7 @@ import CountUp from '../ui/CountUp.jsx'
 import './PerfilEmpresa.css'
 
 const CIFRAS = [
-  { valor: 10, sufijo: '+', etiqueta: 'Años de trayectoria' },
+  { texto: 'Operamos en toda colombia ', etiqueta: ' ' },
   { texto: 'Decenas', etiqueta: 'De operadores de internet y TV confían en GESCO' },
   { valor: 5, etiqueta: 'Entes regulatorios dominados: MinTIC · CRC · ANE · SIC · RUTIC' },
   { valor: 100, sufijo: '%', etiqueta: 'Información verificada en fuente oficial' },

@@ -17,7 +17,7 @@ export const ENTES_REGULATORIOS = [
     resumen: 'Vigilancia, control y cumplimiento operativo del sector.',
     href: 'https://www.mintic.gov.co/',
     tips: [
-      'Formule y adopte el Plan de Gestión de Riesgo de Desastres exigido por la Circular 003 de 2018, incluso si es un ISP pequeño.',
+      'Formule y adopte el Plan de Gestión de Riesgo de Desastres exigido por la Circular 003 de 2018, incluso si es un PRST pequeño.',
       'Publique y mantenga actualizada en su portal web la información de planes, tarifas y canales de PQR conforme a las circulares vigentes.',
       'Responda con evidencia documentada cualquier requerimiento de la Dirección de Vigilancia y Control — el silencio o la demora agravan cualquier hallazgo.',
     ],
