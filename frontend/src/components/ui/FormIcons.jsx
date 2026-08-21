@@ -37,3 +37,10 @@ export function IconMessage() {
     </svg>
   )
 }
+export function IconPhone() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+      <path d="M6 3.5h3l1.5 4-2 1.5c.9 2.2 2.6 3.9 4.8 4.8l1.5-2 4 1.5v3c0 1.1-.9 2-2 2C10.5 18.3 5.7 13.5 4 7.5c0-1.1.9-2 2-2Z" strokeLinejoin="round" />
+    </svg>
+  )
+}

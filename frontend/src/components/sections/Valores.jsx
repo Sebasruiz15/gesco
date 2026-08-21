@@ -9,6 +9,12 @@ const VALORES = [
     texto:
       'No afirmamos nada que no podamos sustentar en la fuente oficial. Cada cifra y cada norma que entregamos ha sido verificada.',
   },
+
+  {
+    titulo: 'Integralidad',
+    texto:
+      'Las necesidades de un PRST no llegan por separado, y las soluciones tampoco deberían. Buscamos ser un solo aliado para toda la operación: lo regulatorio, lo administrativo, lo contable y lo operativo se resuelven en un mismo lugar, con una visión completa del negocio.',
+  },
   {
     titulo: 'Honestidad comercial',
     texto:

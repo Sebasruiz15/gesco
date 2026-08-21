@@ -14,6 +14,22 @@ export const SERVICIOS_PROYECTO = [
     ],
     mensajeWhatsApp: 'Hola, quiero agendar el Diagnóstico Express de GESCO.',
   },
+{
+    slug: 'diagnostico-integral',
+    etapa: 'El mapa completo',
+    nombre: 'Diagnóstico Regulatorio Integral',
+    gancho: 'Deje de adivinar qué le aplica',
+    resumen:
+      'Tras la simplificación normativa reciente, muchos PRST cumplen de más en unas obligaciones y de menos en otras, con matrices pensadas para operadores mucho más grandes. Hacemos el inventario completo de lo que realmente le aplica a usted, con un plan priorizado y un calendario de vencimientos a 12 meses.',
+    bullets: [
+      'Diagnóstico en los cuatro frentes de su operación',
+      'Plan de regularización priorizado por urgencia',
+      'Calendario de vencimientos a un año, listo para usar',
+    ],
+    mensajeWhatsApp: 'Hola, quiero información sobre el Diagnóstico Regulatorio Integral de GESCO.',
+  },
+
+
   {
     slug: 'alivios-diferenciales',
     etapa: 'Ahorro inmediato',
@@ -42,20 +58,7 @@ export const SERVICIOS_PROYECTO = [
     ],
     mensajeWhatsApp: 'Hola, quiero información sobre la Auditoría de Licenciamiento de Contenidos de GESCO.',
   },
-  {
-    slug: 'diagnostico-integral',
-    etapa: 'El mapa completo',
-    nombre: 'Diagnóstico Regulatorio Integral',
-    gancho: 'Deje de adivinar qué le aplica',
-    resumen:
-      'Tras la simplificación normativa reciente, muchos PRST cumplen de más en unas obligaciones y de menos en otras, con matrices pensadas para operadores mucho más grandes. Hacemos el inventario completo de lo que realmente le aplica a usted, con un plan priorizado y un calendario de vencimientos a 12 meses.',
-    bullets: [
-      'Diagnóstico en los cuatro frentes de su operación',
-      'Plan de regularización priorizado por urgencia',
-      'Calendario de vencimientos a un año, listo para usar',
-    ],
-    mensajeWhatsApp: 'Hola, quiero información sobre el Diagnóstico Regulatorio Integral de GESCO.',
-  },
+  
   {
     slug: 'excepcion-futic',
     etapa: 'Decisión financiera',

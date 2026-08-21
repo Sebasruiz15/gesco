@@ -1,9 +1,16 @@
 /* archivo: frontend/src/components/ui/FloatingWhatsApp.css */
-.floating-whatsapp {
+.floating-whatsapp-wrapper {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  z-index: 100; /* por encima del navbar (z-index: 50) y de todo el contenido */
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.floating-whatsapp {
+  position: relative;
   width: 58px;
   height: 58px;
   border-radius: 50%;
@@ -14,6 +21,7 @@
   justify-content: center;
   box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .floating-whatsapp svg {
@@ -23,8 +31,6 @@
   z-index: 1;
 }
 
-/* Anillo pulsante detrás del botón, para llamar la atención sin ser
-   invasivo — mismo principio que el punto del badge en Recursos. */
 .floating-whatsapp__pulse {
   position: absolute;
   inset: 0;
@@ -44,10 +50,62 @@
   }
 }
 
+/* --- Burbuja de anuncio --- */
+.floating-whatsapp__bubble {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  color: var(--color-ink);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  padding: 0.85rem 2.2rem 0.85rem 1.1rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 24px rgba(11, 24, 48, 0.18);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Triángulo apuntando hacia el botón, como una burbuja de chat real */
+.floating-whatsapp__bubble::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: #fff;
+}
+
+.floating-whatsapp__close {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: none;
+  color: var(--color-slate);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating-whatsapp__close:hover {
+  color: var(--color-ink);
+}
+
 @media (max-width: 480px) {
-  .floating-whatsapp {
+  .floating-whatsapp-wrapper {
     bottom: 16px;
     right: 16px;
+  }
+
+  .floating-whatsapp {
     width: 52px;
     height: 52px;
   }
@@ -55,5 +113,10 @@
   .floating-whatsapp svg {
     width: 26px;
     height: 26px;
+  }
+
+  .floating-whatsapp__bubble {
+    font-size: var(--text-xs);
+    padding: 0.7rem 1.8rem 0.7rem 0.9rem;
   }
 }

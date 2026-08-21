@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { enviarContacto } from '../services/api.js'
 
-const ESTADO_INICIAL = { nombre: '', correo: '', tipoConsulta: 'operacion-isp', mensaje: '' }
+const ESTADO_INICIAL = { nombre: '', correo: '', telefono: '', tipoConsulta: 'express', mensaje: '' }
 // 'idle' | 'enviando' | 'exito' | 'error'
 
 export function useContactForm() {
@@ -20,6 +20,9 @@ export function useContactForm() {
     const nuevosErrores = {}
     if (!valores.nombre.trim()) nuevosErrores.nombre = 'Cuéntanos tu nombre.'
     if (!/^\S+@\S+\.\S+$/.test(valores.correo)) nuevosErrores.correo = 'Ingresa un correo válido.'
+    if (!/^\d{7,10}$/.test(valores.telefono.trim())) {
+      nuevosErrores.telefono = 'Ingresa un número válido (solo dígitos, sin espacios).'
+    }
     if (valores.mensaje.trim().length < 10) nuevosErrores.mensaje = 'Danos un poco más de contexto (mín. 10 caracteres).'
     setErrores(nuevosErrores)
     return Object.keys(nuevosErrores).length === 0

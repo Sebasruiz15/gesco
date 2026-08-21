@@ -6,15 +6,22 @@
 
 .footer__main {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-columns: 1.6fr auto 1fr auto 1fr;
   gap: var(--space-4);
-  padding-block: var(--space-5);
+  padding-block: var(--space-6);
+}
+
+/* Línea vertical sutil entre columnas, para separar sin necesitar
+   más espacio en blanco — un recurso típico de footers "de agencia". */
+.footer__divider {
+  width: 1px;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .footer__col h4 {
   font-family: var(--font-display);
   font-size: var(--text-sm);
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-signal);
   margin-bottom: var(--space-2);
@@ -26,7 +33,7 @@
   gap: 0.5rem;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
   color: #fff;
   margin-bottom: var(--space-1);
 }
@@ -34,38 +41,78 @@
 .footer__tagline {
   font-size: var(--text-sm);
   color: #94a1bd;
-  line-height: 1.6;
-  max-width: 32ch;
+  line-height: 1.65;
+  max-width: 34ch;
+  margin-bottom: var(--space-3);
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer__links a {
+  font-size: var(--text-sm);
+  color: #cdd6e6;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+  width: fit-content;
+}
+
+.footer__links a:hover {
+  color: var(--color-signal);
+  transform: translateX(3px);
 }
 
 .footer__contact {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
-  font-size: var(--text-sm);
 }
 
-.footer__contact a {
+.footer__contact-name {
+  font-size: var(--text-sm);
+  color: #94a1bd;
+  margin-bottom: var(--space-2);
+}
+
+.footer__contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: var(--text-sm);
   color: #cdd6e6;
   text-decoration: none;
+  margin-bottom: 0.65rem;
   transition: color 0.2s ease;
 }
 
-.footer__contact a:hover {
-  color: var(--color-signal);
+.footer__contact-link svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+.footer__contact-link:not(.footer__contact-link--static):hover {
+  color: #fff;
+}
+
+.footer__contact-link--static {
+  color: #94a1bd;
+  cursor: default;
 }
 
 .footer__social-icons {
   display: flex;
-  gap: var(--space-2);
+  gap: 0.65rem;
 }
 
 .footer__social-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: #cdd6e6;
@@ -73,8 +120,8 @@
 }
 
 .footer__social-icon svg {
-  width: 18px;
-  height: 18px;
+  width: 17px;
+  height: 17px;
 }
 
 .footer__social-icon:hover {
@@ -84,9 +131,6 @@
   transform: translateY(-3px);
 }
 
-/* Esta es la separación clara que pediste: una franja distinta,
-   no solo un borde delgado, para que se note inequívocamente
-   dónde termina el contenido de la página. */
 .footer__bottom {
   background: #060e1e;
   padding-block: var(--space-2);
@@ -122,7 +166,28 @@
   color: #cdd6e6;
 }
 
-@media (max-width: 500px) {
+/* Tablet: se colapsan los divisores verticales, pasa a 2 columnas */
+@media (max-width: 900px) {
+  .footer__main {
+    grid-template-columns: 1fr 1fr;
+    row-gap: var(--space-4);
+  }
+
+  .footer__divider {
+    display: none;
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Mobile: todo en una sola columna */
+@media (max-width: 560px) {
+  .footer__main {
+    grid-template-columns: 1fr;
+  }
+
   .footer__bottom-inner {
     flex-direction: column;
     gap: 0.35rem;

@@ -35,27 +35,100 @@
   margin-bottom: var(--space-3);
 }
 
-.contacto__info {
+.contacto__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.05em;
+  color: var(--color-signal);
+  background: rgba(244, 228, 9, 0.08);
+  border: 1px solid rgba(244, 228, 9, 0.3);
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.contacto__badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-signal);
+  animation: pulso-badge-contacto 1.6s ease-in-out infinite;
+}
+
+@keyframes pulso-badge-contacto {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(244, 228, 9, 0.5);
+  }
+  50% {
+    opacity: 0.6;
+    box-shadow: 0 0 0 4px rgba(244, 228, 9, 0);
+  }
+}
+
+.contacto__card {
   display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+  align-items: center;
+  gap: var(--space-2);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.contacto__card-nombre {
+  font-weight: 600;
+  color: #fff;
   font-size: var(--text-sm);
 }
 
-.contacto__info a {
-  color: var(--color-signal);
-  text-decoration: none;
+.contacto__card-cargo {
+  font-size: var(--text-xs);
+  color: #94a1bd;
 }
 
-/* --- Tarjeta de vidrio con borde giratorio --- */
+.contacto__links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.contacto__link-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: fit-content;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  padding: 0.8rem 1.25rem;
+  font-size: var(--text-sm);
+  color: #dbe2f0;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.contacto__link-pill svg {
+  flex-shrink: 0;
+}
+
+.contacto__link-pill:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-signal);
+  transform: translateX(3px);
+}
+
 .contacto__form-wrapper {
   position: relative;
   border-radius: var(--radius-md);
   padding: 1.5px;
 }
 
-/* Borde animado: un gradiente cónico que gira lentamente detrás de la
-   tarjeta, simulando una señal transmitiéndose alrededor del formulario. */
 .contacto__form-glow {
   position: absolute;
   inset: 0;

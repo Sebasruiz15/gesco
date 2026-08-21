@@ -5,7 +5,7 @@ import CatalogoServicios from '../components/sections/CatalogoServicios.jsx'
 export default function ServiciosISPPage() {
   return (
     <>
-      <ServiciosISP />
+      {/* <ServiciosISP /> */}
       <CatalogoServicios />
     </>
   )

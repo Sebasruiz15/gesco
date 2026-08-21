@@ -4,7 +4,7 @@ import CountUp from '../ui/CountUp.jsx'
 import './PerfilEmpresa.css'
 
 const CIFRAS = [
-  { texto: 'Operamos en toda colombia ', etiqueta: ' ' },
+  { texto: 'Nacional', etiqueta: 'Operamos en toda Colombia' },
   { texto: 'Decenas', etiqueta: 'De operadores de internet y TV confían en GESCO' },
   { valor: 5, etiqueta: 'Entes regulatorios dominados: MinTIC · CRC · ANE · SIC · RUTIC' },
   { valor: 100, sufijo: '%', etiqueta: 'Información verificada en fuente oficial' },
@@ -23,7 +23,7 @@ export default function PerfilEmpresa() {
           <p className="eyebrow">Quiénes somos</p>
           <h2>Una firma con trayectoria comprobada en el sector TIC</h2>
           <p className="perfil__texto">
-            GESCO nació como firma contable y administrativa, y hoy es una consultoría
+            GESCO nació como firma contable y administrativa, y hoy es una Empresa consultora
             especializada en telecomunicaciones con trayectoria comprobada: decenas de operadores
             confían en nosotros sus obligaciones regulatorias, contables y financieras.
           </p>

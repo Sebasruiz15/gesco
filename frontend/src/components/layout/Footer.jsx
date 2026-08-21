@@ -1,11 +1,13 @@
 // archivo: frontend/src/components/layout/Footer.jsx
+import { Link } from 'react-router-dom'
 import SignalArc from '../ui/SignalArc.jsx'
 import './Footer.css'
+import { IconWhatsApp, IconGmail } from '../ui/BrandIcons.jsx'
 
 const REDES = [
   {
     nombre: 'Facebook',
-    href: 'https://facebook.com/gescoconsultorias', 
+    href: 'https://facebook.com/gescoconsultorias',
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M13.5 21v-7.5h2.5l.5-3H13.5V8.5c0-.9.3-1.5 1.6-1.5H16.5V4.3C16.2 4.2 15.2 4 14 4c-2.4 0-4 1.5-4 4.2V10.5H7.5v3H10V21h3.5z" />
@@ -14,7 +16,7 @@ const REDES = [
   },
   {
     nombre: 'Instagram',
-    href: 'https://instagram.com/gescoconsultorias', 
+    href: 'https://www.instagram.com/gesco.col?utm_source=qr',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
         <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" />
@@ -32,18 +34,34 @@ const REDES = [
       </svg>
     ),
   },
-
-
   {
-  nombre: 'LinkedIn',
-  href: 'https://linkedin.com/company/gesco-consultorias', 
-  icon: (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M6.94 8.5H3.56V20.5H6.94V8.5ZM5.25 3.5C4.1 3.5 3.25 4.35 3.25 5.44C3.25 6.5 4.08 7.38 5.22 7.38H5.25C6.42 7.38 7.25 6.5 7.25 5.44C7.23 4.35 6.42 3.5 5.25 3.5ZM20.5 13.6C20.5 10.35 18.78 8.85 16.48 8.85C14.63 8.85 13.8 9.87 13.34 10.58V9.1H9.96C10.01 10.14 9.96 20.5 9.96 20.5H13.34V13.9C13.34 13.55 13.37 13.19 13.47 12.94C13.75 12.24 14.4 11.51 15.48 11.51C16.9 11.51 17.13 12.79 17.13 14.15V20.5H20.5V13.6Z" />
-    </svg>
-  ),
-},
+    nombre: 'LinkedIn',
+    href: 'https://linkedin.com/company/gesco-consultorias',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M6.94 8.5H3.56V20.5H6.94V8.5ZM5.25 3.5C4.1 3.5 3.25 4.35 3.25 5.44C3.25 6.5 4.08 7.38 5.22 7.38H5.25C6.42 7.38 7.25 6.5 7.25 5.44C7.23 4.35 6.42 3.5 5.25 3.5ZM20.5 13.6C20.5 10.35 18.78 8.85 16.48 8.85C14.63 8.85 13.8 9.87 13.34 10.58V9.1H9.96C10.01 10.14 9.96 20.5 9.96 20.5H13.34V13.9C13.34 13.55 13.37 13.19 13.47 12.94C13.75 12.24 14.4 11.51 15.48 11.51C16.9 11.51 17.13 12.79 17.13 14.15V20.5H20.5V13.6Z" />
+      </svg>
+    ),
+  },
 ]
+
+const ENLACES = [
+  { to: '/nosotros', label: 'Nosotros' },
+  { to: '/servicios-isp', label: 'Servicios' },
+  { to: '/tips-regulatorios', label: 'Tips Regulatorios' },
+  { to: '/contacto', label: 'Contacto' },
+]
+
+
+
+function IconPin() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+      <path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z" strokeLinejoin="round" />
+      <circle cx="12" cy="9.5" r="2.3" />
+    </svg>
+  )
+}
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -57,23 +75,12 @@ export default function Footer() {
             <span>GESCO</span>
           </div>
           <p className="footer__tagline">
-            Consultoría integral para Proveedores de Redes y Servicios de Telecomunicaciones (PRST) en
-            Colombia.
+            Consultoría integral para Proveedores de Redes y Servicios de Telecomunicaciones (PRST)
+            en Colombia.
           </p>
-        </div>
-
-        <div className="footer__col footer__contact">
-          <h4>Contacto</h4>
-          <p>Marta Luz Vélez Tamayo — Consultora</p>
-          <a href="tel:3145178003">3145178003</a>
-          <a href="mailto:operaciones@gescocol.com">operaciones@gescocol.com</a>
-        </div>
-
-        <div className="footer__col footer__social">
-          <h4>Síguenos</h4>
           <div className="footer__social-icons">
             {REDES.map((red) => (
-              <a
+              <a 
                 key={red.nombre}
                 href={red.href}
                 target="_blank"
@@ -86,24 +93,56 @@ export default function Footer() {
             ))}
           </div>
         </div>
+
+        <div className="footer__divider" aria-hidden="true" />
+
+        <div className="footer__col">
+          <h4>Navegación</h4>
+          <nav className="footer__links">
+            {ENLACES.map((enlace) => (
+              <Link key={enlace.to} to={enlace.to}>
+                {enlace.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+
+        <div className="footer__divider" aria-hidden="true" />
+
+        <div className="footer__col footer__contact">
+          <h4>Contacto</h4>
+          {/* <p className="footer__contact-name">Marta Luz Vélez Tamayo — Consultora</p> */}
+
+          <a href="https://wa.me/573145178003" target="_blank" rel="noopener noreferrer" className="footer__contact-link">
+            <IconWhatsApp />
+            3145178003
+          </a>
+          <a href="mailto:operaciones@gescocol.com" className="footer__contact-link">
+            <IconGmail />
+            operaciones@gescocol.com
+          </a>
+          <div className="footer__contact-link footer__contact-link--static">
+            <IconPin />
+            Medellín, Colombia
+          </div>
+        </div>
       </div>
 
-      
-<div className="footer__bottom">
-  <div className="footer__bottom-inner container">
-    <p className="footer__copy">
-      © {year} GESCO Consultorías. Todos los derechos reservados.
-    </p>
-    <a 
-      href="https://cv-sebastian-mu.vercel.app/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="footer__credit"
-    >
-      Desarrollado por <span>JS.Dev</span>
-    </a>
-  </div>
-</div>
+      <div className="footer__bottom">
+        <div className="footer__bottom-inner container">
+          <p className="footer__copy">
+            © {year} GESCO Consultorías. Todos los derechos reservados.
+          </p>
+          <a
+            href="https://cv-sebastian-mu.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer__credit"
+          >
+            Desarrollado por <span>JS.Dev</span>
+          </a>
+        </div>
+      </div>
     </footer>
   )
 }

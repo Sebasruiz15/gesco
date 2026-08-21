@@ -4,7 +4,7 @@ export const ENTES_REGULATORIOS = [
     slug: 'rutic',
     nombre: 'RUTIC',
     resumen: 'Registro Único de TIC — su habilitación como PRST.',
-    href: 'https://www.mintic.gov.co/portal/inicio/Atencion-y-Servicio-a-la-Ciudadania/Tramites-y-Servicios/Registro-Unico-de-TIC-RUTIC/',
+    href: 'https://www.mintic.gov.co/portal/inicio/Tramites-y-servicios/Registros/6398:Registro-Unico-de-TIC-Industria-de-Comunicaciones',
     tips: [
       'Verifique que su PRST esté correctamente clasificado en el RUTIC (tipo de servicio, cobertura) antes de iniciar operación — un registro mal clasificado se detecta en la primera auditoría.',
       'Actualice el RUTIC cada vez que cambien datos societarios, representante legal o portafolio de servicios; la información desactualizada es causal de requerimiento.',

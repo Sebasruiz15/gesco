@@ -57,8 +57,8 @@ export default function CatalogoServicios() {
 
           <div className="catalogo__niveles-grid">
             <NivelCard nivel={NIVELES_CONTINUIDAD[0]} delay={0} />
-            <NivelCard nivel={NIVELES_CONTINUIDAD[1]} destacado delay={0.1} />
-            <NivelCard nivel={NIVELES_CONTINUIDAD[2]} delay={0.2} />
+            <NivelCard nivel={NIVELES_CONTINUIDAD[1]} delay={0.2} />
+            <NivelCard nivel={NIVELES_CONTINUIDAD[2]} destacado delay={0.1} />
           </div>
         </div>
       </section>
