@@ -43,7 +43,6 @@ export default function Navbar() {
             </Link>
           ))}
         </nav>
-
         <button
           className="navbar__toggle"
           aria-label={open ? 'Cerrar menú' : 'Abrir menú'}

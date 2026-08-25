@@ -1,5 +1,4 @@
 /* archivo: frontend/src/components/layout/Navbar.css */
-
 .navbar {
   position: sticky;
   top: 0;
@@ -8,7 +7,7 @@
     radial-gradient(140% 180% at 90% 0%, rgba(244, 228, 9, 0.22) 0%, transparent 55%),
     linear-gradient(135deg, #afb1b4 0%, #e2e5ea 100%);
   border-bottom: 2px solid var(--color-signal);
-  overflow: hidden;
+  
 }
 
 .navbar__inner {

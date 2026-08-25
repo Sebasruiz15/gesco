@@ -2,13 +2,13 @@
 export const SERVICIOS_PROYECTO = [
   {
     slug: 'express',
-    etapa: 'Primer paso · sin costo',
+    etapa: 'Primer paso · bajo costo',
     nombre: 'Diagnóstico Express',
-    gancho: 'Su situación real, en 30 minutos',
+    gancho: 'Su situación real, en 45 minutos',
     resumen:
       'Una sesión corta donde revisamos tres frentes clave de su operación — alivios que podría estar desaprovechando, el estado de su exoneración FUTIC y, si tiene TV, una alerta temprana sobre licencias de contenido. Sale con un informe claro de qué está bien, qué urge, y qué sigue.',
     bullets: [
-      'Sesión de 30 minutos, con cita previa',
+      'Sesión de 45 minutos, con cita previa',
       'Informe semáforo entregado en 48 horas',
       'Sin compromiso ni letra pequeña',
     ],
