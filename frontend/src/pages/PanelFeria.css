@@ -1,0 +1,74 @@
+/* archivo: frontend/src/pages/PanelFeria.css */
+.panel-feria {
+  padding-block: var(--space-5);
+  min-height: 80vh;
+  background: var(--color-bg);
+}
+
+.panel-feria__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.panel-feria__header h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--color-navy-800);
+}
+
+.panel-feria__contador {
+  font-size: var(--text-sm);
+  color: var(--color-slate);
+  margin-top: 0.3rem;
+}
+
+.panel-feria__tabla-wrapper {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+}
+
+.panel-feria__tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.panel-feria__tabla th {
+  text-align: left;
+  padding: 0.85rem 1rem;
+  background: var(--color-navy-950);
+  color: #fff;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.panel-feria__tabla td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-line);
+  color: var(--color-ink);
+}
+
+.panel-feria__tabla tbody tr:hover {
+  background: var(--color-bg);
+}
+
+.panel-feria__tabla a {
+  color: var(--color-navy-600);
+  text-decoration: none;
+}
+
+.panel-feria__tabla a:hover {
+  color: var(--color-signal-ink);
+}
+
+.panel-feria__vacio {
+  padding: var(--space-4);
+  text-align: center;
+  color: var(--color-slate);
+}

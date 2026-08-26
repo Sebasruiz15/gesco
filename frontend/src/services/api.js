@@ -39,3 +39,24 @@ export async function enviarContacto(datos) {
     throw new Error('No se pudo enviar el mensaje. Intenta de nuevo o escríbenos por WhatsApp.')
   }
 }
+
+export async function enviarRegistroFeria(datos) {
+  try {
+    await emailjs.send(
+      SERVICE_ID,
+      TEMPLATE_ID,
+      {
+        nombre: datos.nombre,
+        correo: datos.correo,
+        telefono: datos.telefono,
+        telefono_whatsapp: `https://wa.me/57${datos.telefono.replace(/\D/g, '')}`,
+        tipo_consulta: `Diagnóstico Express — FERIA (${datos.municipio})`,
+        mensaje: `Registro desde la promoción de feria. Municipio: ${datos.municipio}. Tipo de servicio: ${datos.tipoServicio}.`,
+      },
+      { publicKey: PUBLIC_KEY }
+    )
+  } catch (error) {
+    console.error('Error al enviar registro de feria:', error)
+    throw new Error('No se pudo completar el registro. Escríbenos por WhatsApp para asegurar tu cupo.')
+  }
+}

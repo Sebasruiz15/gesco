@@ -9,6 +9,8 @@ import ServiciosISPPage from './pages/ServiciosISPPage.jsx'
 import ProcesosContablesPage from './pages/ProcesosContablesPage.jsx'
 import ContactoPage from './pages/ContactoPage.jsx'
 import TipsRegulatorios from './pages/TipsRegulatorios.jsx'
+import Feria from './pages/Feria.jsx'
+import PanelFeria from './pages/PanelFeria.jsx'
 
 export default function App() {
   return (
@@ -22,6 +24,8 @@ export default function App() {
           <Route path="/procesos-contables" element={<ProcesosContablesPage />} />
           <Route path="/contacto" element={<ContactoPage />} />
           <Route path="/tips-regulatorios" element={<TipsRegulatorios />} />
+          <Route path="/feria" element={<Feria />} />
+          <Route path="/panel-feria" element={<PanelFeria />} />
         </Routes>
       </main>
       <Footer />

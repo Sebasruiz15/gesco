@@ -1,0 +1,195 @@
+/* archivo: frontend/src/components/... */
+/* archivo: frontend/src/pages/Feria.css */
+.feria {
+  position: relative;
+  min-height: 90vh;
+  background: var(--color-navy-950);
+  color: #fff;
+  padding-block: var(--space-6);
+  overflow: hidden;
+}
+
+.feria__content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.feria__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-signal);
+  background: rgba(244, 228, 9, 0.1);
+  border: 1px solid rgba(244, 228, 9, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  margin-bottom: var(--space-3);
+}
+
+.feria__titulo {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.feria__titulo span {
+  color: var(--color-signal);
+}
+
+.feria__lead {
+  color: #b8c2d9;
+  font-size: var(--text-lg);
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-4);
+  max-width: 52ch;
+}
+
+.feria__cupos {
+  margin-top: var(--space-3);
+  font-size: var(--text-base);
+  color: #dbe2f0;
+}
+
+.feria__cupos strong {
+  color: var(--color-signal);
+  font-size: var(--text-xl);
+}
+
+.feria__cupos-agotado {
+  color: #ff9d97;
+  font-weight: 700;
+}
+
+.feria__beneficios {
+  list-style: none;
+  margin-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.feria__beneficios li {
+  padding-left: 1.2rem;
+  position: relative;
+  color: #dbe2f0;
+  font-size: var(--text-sm);
+}
+
+.feria__beneficios li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-signal);
+}
+
+.feria__form {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.feria__form h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: #fff;
+  margin-bottom: var(--space-1);
+}
+
+.feria__form label {
+  font-size: var(--text-sm);
+  color: #b8c2d9;
+  margin-top: var(--space-1);
+}
+
+.feria__form input {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.feria__form input:focus {
+  outline: none;
+  border-color: var(--color-signal);
+}
+
+.feria__form input[aria-invalid='true'] {
+  border-color: #e0554f;
+}
+
+.feria__error {
+  color: #ff9d97;
+  font-size: var(--text-xs);
+}
+
+.feria__form button {
+  margin-top: var(--space-2);
+}
+
+.feria__feedback {
+  font-size: var(--text-sm);
+  margin-top: var(--space-1);
+}
+
+.feria__feedback--exito {
+  color: #7be0a8;
+}
+
+.feria__feedback--error {
+  color: #ff9d97;
+}
+
+.feria__form--agotado {
+  text-align: center;
+}
+
+.feria__form--agotado p {
+  color: #b8c2d9;
+  margin-bottom: var(--space-3);
+}
+
+@media (max-width: 800px) {
+  .feria__content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feria__form textarea {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  resize: vertical;
+}
+
+.feria__form textarea:focus {
+  outline: none;
+  border-color: var(--color-signal);
+}
+
+.feria__form textarea[aria-invalid='true'] {
+  border-color: #e0554f;
+}

@@ -1,0 +1,62 @@
+/* archivo: frontend/src/components/ui/Countdown.css */
+.countdown-wrapper {
+  margin: var(--space-3) 0;
+}
+
+.countdown__titulo {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #94a1bd;
+  margin-bottom: 0.6rem;
+}
+
+.countdown {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.countdown__bloque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(244, 228, 9, 0.1);
+  border: 1px solid rgba(244, 228, 9, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 1rem;
+  min-width: 64px;
+}
+
+.countdown__valor {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-signal);
+  line-height: 1;
+}
+
+.countdown__etiqueta {
+  font-size: var(--text-xs);
+  color: #b8c2d9;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.3rem;
+}
+
+.countdown--finalizado {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: #ff9d97;
+}
+
+@media (max-width: 420px) {
+  .countdown {
+    flex-wrap: wrap;
+  }
+
+  .countdown__bloque {
+    min-width: 56px;
+    padding: 0.5rem 0.8rem;
+  }
+}
