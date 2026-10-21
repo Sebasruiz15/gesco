@@ -11,6 +11,8 @@ import ContactoPage from './pages/ContactoPage.jsx'
 import TipsRegulatorios from './pages/TipsRegulatorios.jsx'
 import Feria from './pages/Feria.jsx'
 import PanelFeria from './pages/PanelFeria.jsx'
+import PortafolioPage from './pages/PortafolioPage';
+import PortafolioDetallePage from './pages/PortafolioDetallePage';
 
 export default function App() {
   return (
@@ -26,6 +28,8 @@ export default function App() {
           <Route path="/tips-regulatorios" element={<TipsRegulatorios />} />
           <Route path="/feria" element={<Feria />} />
           <Route path="/panel-feria" element={<PanelFeria />} />
+          <Route path="/portafolio" element={<PortafolioPage />} />
+          <Route path="/portafolio/:slug" element={<PortafolioDetallePage />} />
         </Routes>
       </main>
       <Footer />

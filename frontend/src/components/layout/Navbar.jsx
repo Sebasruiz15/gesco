@@ -7,7 +7,7 @@ import './Navbar.css'
 
 const LINKS = [
   { to: '/nosotros', label: 'Nosotros' },
-  { to: '/servicios-isp', label: 'Portafolio' },
+  { label: 'Portafolio', to: '/portafolio' },
   // { to: '/procesos-contables', label: 'Procesos Contables' },
   { to: '/tips-regulatorios', label: 'Tips Regulatorios' },
   { to: '/contacto', label: 'Contacto' },
