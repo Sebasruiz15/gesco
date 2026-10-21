@@ -1,0 +1,37 @@
+/* archivo: frontend/src/pages/ServiciosISPPage.css */
+.portafolio-nav {
+  padding-block: var(--space-5) var(--space-3);
+  background: var(--color-bg);
+}
+
+.portafolio-nav h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  color: var(--color-ink);
+  max-width: 50ch;
+  margin-top: var(--space-1);
+}
+
+.portafolio-nav__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.portafolio-nav__pill {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-navy-800);
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.portafolio-nav__pill:hover {
+  border-color: var(--color-signal);
+  color: var(--color-signal-ink);
+}

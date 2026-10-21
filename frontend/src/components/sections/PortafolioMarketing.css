@@ -1,0 +1,28 @@
+/* archivo: frontend/src/components/sections/PortafolioMarketing.css */
+.portafolio-marketing {
+  padding-block: var(--space-6);
+  background: var(--color-navy-950);
+}
+
+.portafolio-marketing__card {
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px dashed rgba(244, 228, 9, 0.35);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  text-align: center;
+  margin-inline: auto;
+}
+
+.portafolio-marketing__card h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: #fff;
+  margin-block: var(--space-2);
+}
+
+.portafolio-marketing__card p {
+  color: #b8c2d9;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}

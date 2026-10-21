@@ -1,0 +1,18 @@
+/* archivo: frontend/src/components/sections/PortafolioWeb.css */
+.portafolio-web {
+  padding-block: var(--space-6);
+  background: var(--color-surface);
+}
+
+.portafolio-web__lead {
+  color: var(--color-slate);
+  max-width: 62ch;
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.portafolio-web__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-3);
+}
